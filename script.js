@@ -8,7 +8,8 @@ function showSearch(countryName) {
   fetch(url)
     .then(unorganized => unorganized.json())
     .then(data => {
-      console.log(data);
+      const previousErrs = document.querySelectorAll(".error");
+      previousErrs.forEach((err) => err.remove());
       mainWrapper.classList.add("show");
       result.classList.add("show");
       

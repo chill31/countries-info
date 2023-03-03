@@ -90,7 +90,7 @@ body {
   max-width: calc(100vw - calc(5vw + 3rem));
   background-color: white;
   padding: 3rem;
-  max-height: calc(100vh - 3rem);
+  max-height: calc(100vh - 10rem);
   position: absolute;
   top: 50%;
   left: 50%;
