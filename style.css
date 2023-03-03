@@ -1,0 +1,145 @@
+/** UTILITY CODE **/
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&display=swap');
+
+@font-face {
+  font-family: "Manrope";
+  src: url(/fonts/font-manrope.ttf)
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Manrope";
+}
+
+body {
+  --accent: #3ea1d0;
+  background-color: var(--accent);
+  overflow-x: hidden;
+}
+
+/* MAIN STYLES */
+
+.wrapper {
+  background-color: white;
+  padding: 3rem 4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30rem;
+  border-radius: .7rem;
+  max-width: calc(100vw - calc(5vw + 4em));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  max-height: 98vh;
+}
+
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .7rem;
+  max-width: calc(98% + 3rem);
+}
+
+@media (max-width: 550px) {
+  .search-wrapper {
+    flex-direction: column;
+  }
+}
+
+.search-input {
+  padding: .5rem .7rem;
+  font-size: 1.2rem;
+  outline: none;
+  border: solid 2px transparent;
+  border-bottom-color: black;
+  max-width: 99%;
+}
+
+.search-input:focus {
+  border-bottom-color: var(--accent);
+}
+
+.search-btn {
+  padding: .7rem 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 1930px;
+  background-color: var(--accent);
+  border: none;
+}
+
+.error {
+  color: rgb(247, 56, 56);
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  font-weight: 400;
+}
+
+/** RESULT DIV STYLES */
+
+.result-wrapper {
+  width: 40rem;
+  max-width: calc(100vw - calc(5vw + 3rem));
+  background-color: white;
+  padding: 3rem;
+  max-height: calc(100vh - 3rem);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  display: none;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.result-wrapper.show {
+  display: flex;
+}
+
+.img-wrapper {
+  width: fit-content;
+  height: fit-content;
+}
+
+.flag {
+  height: 10rem;
+  width: 15rem;
+  border: solid 2px black;
+  padding: 0;
+}
+
+.country {
+  font-size: 2.1rem;
+}
+
+.close-info {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.info-wrapper {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 1.5rem;
+  flex-direction: column;
+  font-size: 1.1rem;
+}
